@@ -636,16 +636,9 @@ module.exports = function(webpackEnv) {
           formatter: isEnvProduction ? typescriptFormatter : undefined,
         }),
     ].filter(Boolean),
-    // Some libraries import Node modules but don't use them in the browser.
-    // Tell Webpack to provide empty mocks for them so importing them works.
     node: {
-      module: 'empty',
-      dgram: 'empty',
-      dns: 'mock',
-      fs: 'empty',
-      net: 'empty',
-      tls: 'empty',
-      child_process: 'empty',
+      __dirname: false,
+      __filename: false,
     },
     // Turn off performance processing because we utilize
     // our own hints via the FileSizeReporter
