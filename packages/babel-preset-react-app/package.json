@@ -1,5 +1,5 @@
 {
-  "name": "@arestifo/babel-preset-react-app",
+  "name": "arestifo-electron-babel-preset-react-app",
   "version": "7.0.2",
   "description": "Babel preset used by Create React App",
   "repository": "arestifo/create-react-app",
